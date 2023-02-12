@@ -1,0 +1,16 @@
+#!/bin/bash
+	
+	inc=1
+	echo 'Informe o diretorio ou arquivo: '
+	read arquivo
+	echo 'Imforme o nome da pasta de backup: '
+	read nome
+
+		tar -czvf backup$inc.tar.gz $arquivo
+		mkdir $nome
+		cp backup$inc.tar.gz ./$nome
+		rm backup$inc.tar.gz
+
+		echo 'Backup executado com sucesso!!'
+
+

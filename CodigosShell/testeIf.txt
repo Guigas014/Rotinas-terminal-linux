@@ -1,0 +1,20 @@
+#!/bin/bash
+
+	echo 'Digite o nome de um arquivo: '
+	read arq
+
+	if  [ -e $arq ]; then
+		echo 'Esse arquivo existe!'
+		echo ''
+	else
+		echo 'Esse arquivo NÃO existe!'		
+	fi
+
+
+	#nome=
+	
+	#if [ $nome ]; then
+		#echo "A palavra" $nome "tem mais de 0 caracter"
+	#else
+		#echo "A palavra" $nome "não existe"
+	#fi

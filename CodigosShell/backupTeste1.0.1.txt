@@ -1,0 +1,34 @@
+#!/bin/bash
+
+	echo 'Informe o diretoria ou arquivo: '
+	read pasta
+
+	if [ -e $pasta ]
+	then
+		echo 'Imforme o nome da pasta de backup: '
+		read nome
+	
+		if [ -d $nome ]
+		then
+			cd $nome	
+		else	
+			mkdir $nome 
+			cd $nome	
+		fi
+
+		arqName=backup.`date +%d-%m-%y_%H:%M`
+		tar -czvf backup_.tar ../$pasta
+		mv backup_.tar $arqName.tar
+		ls -l
+		cd ..
+
+	else
+		echo "Esse diretório ou arquivo não existe!"
+	fi
+
+
+
+#tar -czvf backup.tar.gz $pasta
+#cp backup.tar.gz ./$nome
+#rm backup.tar.gz
+#cd $nome

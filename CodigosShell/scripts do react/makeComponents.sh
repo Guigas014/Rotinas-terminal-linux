@@ -12,8 +12,9 @@ read -p "Em qual pasta o componente deve ser criado: " locationFolder
 read -p "Informe o nome do componente: " compName
 
 
-#Pesquisa se a pasta existe, salva o caminho entra no diretório e cria o a pasta do componente.
+#Pesquisa se a pasta existe, salva o caminho entra no diretório e cria a pasta do componente.
 folder=`find */$locationFolder -maxdepth 0`
+
 if [ $folder ]; then
   cd $folder
   mkdir $compName 

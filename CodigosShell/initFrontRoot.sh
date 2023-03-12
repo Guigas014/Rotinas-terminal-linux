@@ -33,7 +33,7 @@ echo -e '<!DOCTYPE html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>$projName</title>
+    <title>'$projName'</title>
 
     <link rel="stylesheet" href="styles.css" type="text/css" media="all">
   </head>

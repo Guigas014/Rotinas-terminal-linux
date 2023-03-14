@@ -77,8 +77,8 @@ case $op in
     > styles.ts;
     stylesImport="{ styles } from './styles'"
     echo "$styleContentTS" >> styles.ts
-    reactNativeImport="import { View } from 'react-native';"
-    reactNativeView="<View>Hello ReactNative</View>";;
+    reactNativeImport="import { View, Text } from 'react-native';"
+    reactNativeView="<View><Text>Hello ReactNative</Text></View>";;
   *)
     cd ..
     rm -dr $compName
